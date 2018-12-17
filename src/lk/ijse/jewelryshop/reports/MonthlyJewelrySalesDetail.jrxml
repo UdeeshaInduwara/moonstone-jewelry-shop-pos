@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-16T06:11:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MonthlyJewelrySalesDetail" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b89186c5-1ff0-437e-9596-b9df21859492">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JewelryShop"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select monthname(o.orderDate) as monthName,count(jp.jtid) as salesCount from jewelrypurchasedetail jp,orders o where jp.oid=o.oid and year(o.orderDate)=year(curdate()) group by month(o.orderDate) order by month(o.orderDate) asc]]>
+	</queryString>
+	<field name="monthName" class="java.lang.String"/>
+	<field name="salesCount" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="180" y="10" width="200" height="30" uuid="fbc93229-083b-47ae-ba50-eff484ee950a"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Jewelry Sales Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="307" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<lineChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="0" width="550" height="260" uuid="ee6891be-f391-45ed-bc00-e024c274421f"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Sales"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{monthName}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{salesCount}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<linePlot>
+					<plot/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</linePlot>
+			</lineChart>
+		</band>
+	</summary>
+</jasperReport>

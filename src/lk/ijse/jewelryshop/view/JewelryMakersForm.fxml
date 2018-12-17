@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.jewelryshop.controller.JewelryMakersController">
+   <children>
+      <TableView fx:id="tblMakersDetail" layoutX="28.0" layoutY="122.0" onMouseClicked="#selectMaker" prefHeight="270.0" prefWidth="1017.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn prefWidth="249.0" text="Maker ID" />
+            <TableColumn prefWidth="386.0" text="Maker Name" />
+            <TableColumn prefWidth="368.0" text="Contact NO" />
+         </columns>
+      </TableView>
+      <ButtonBar layoutX="706.0" layoutY="392.0" prefHeight="40.0" prefWidth="339.0">
+         <buttons>
+            <JFXButton fx:id="btnRemove" buttonType="RAISED" onAction="#removeMakers" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #F62459; -fx-background-radius: 2em;" text="Remove" textFill="WHITE" />
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" disable="true" onAction="#updateJewelryMaker" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #22a7f0; -fx-background-radius: 2em;" stylesheets="@../css/ButtonHover.css" text="Update" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="706.0" layoutY="521.0" prefHeight="40.0" prefWidth="339.0">
+         <buttons>
+            <JFXButton fx:id="btnCancel" buttonType="RAISED" onAction="#cancelAdding" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #F62459; -fx-background-radius: 2em;" text="Cancel" textFill="WHITE" />
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" onAction="#addJewelryMaker" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #22a7f0; -fx-background-radius: 2em;" styleClass="selectButton" stylesheets="@../css/ButtonHover.css" text="Add" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <Label graphicTextGap="15.0" layoutX="16.0" layoutY="4.0" opacity="0.9" prefHeight="32.0" prefWidth="211.0" text="Jewelry Makers">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Circled%20Left%202_70px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <ButtonBar layoutX="32.0" layoutY="77.0" prefHeight="40.0" prefWidth="336.0">
+         <buttons>
+            <TextField fx:id="txtSearchMakerID" onKeyReleased="#searchMakerUsingID" promptText="Maker ID" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtSearchMakerName" onKeyReleased="#searchMakerUsingName" promptText="Name" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+         </buttons>
+      </ButtonBar>
+      <Label graphicTextGap="10.0" layoutX="32.0" layoutY="42.0" prefHeight="25.0" prefWidth="149.0" text="View Jewelry Makers" textFill="#22a7f0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Search_50px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Separator layoutX="185.0" layoutY="55.0" prefHeight="3.0" prefWidth="863.0" />
+      <Label graphicTextGap="10.0" layoutX="32.0" layoutY="453.0" prefHeight="25.0" prefWidth="149.0" text="Add Jewelry Makers" textFill="#22a7f0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Plus_50px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Separator layoutX="185.0" layoutY="466.0" prefHeight="3.0" prefWidth="863.0" />
+      <ButtonBar layoutX="32.0" layoutY="490.0" prefHeight="40.0" prefWidth="539.0">
+         <buttons>
+            <JFXTextField fx:id="txtMakerID" editable="false" focusColor="#22a7f0" labelFloat="true" onKeyPressed="#txtMakerIdOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Maker ID" />
+            <JFXTextField fx:id="txtMakerName" focusColor="#22a7f0" labelFloat="true" onKeyPressed="#txtMakerNameOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Name" />
+            <JFXTextField fx:id="txtContactNo" focusColor="#22a7f0" labelFloat="true" onKeyPressed="#txtContactNoOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Contact No" />
+         </buttons>
+      </ButtonBar>
+      <JFXButton fx:id="btnReport" buttonType="RAISED" layoutX="942.0" layoutY="14.0" onAction="#loadJewelryMakersDetailReport" prefHeight="26.0" prefWidth="102.0" style="-fx-background-radius: 2em; -fx-background-color: #00b16a;" text="Report" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Print_40px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

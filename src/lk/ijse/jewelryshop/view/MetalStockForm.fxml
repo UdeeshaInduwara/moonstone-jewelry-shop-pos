@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.jewelryshop.controller.MetalStockController">
+   <children>
+      <TableView fx:id="tblMetalStockDetail" layoutX="235.0" layoutY="87.0" onMouseClicked="#selectMetalStock" prefHeight="281.0" prefWidth="814.0" tableMenuButtonVisible="true">
+         <columns>
+            <TableColumn prefWidth="68.0" text="Metal Id" />
+            <TableColumn prefWidth="97.0" text="Metal" />
+            <TableColumn prefWidth="90.0" text="Carat" />
+            <TableColumn prefWidth="131.0" text="Weight" />
+            <TableColumn prefWidth="133.0" text="Purchase Date" />
+            <TableColumn prefWidth="103.0" text="Businessman ID" />
+            <TableColumn prefWidth="179.0" text="Purchased Businessman" />
+         </columns>
+      </TableView>
+      <ButtonBar layoutX="727.0" layoutY="368.0" prefHeight="40.0" prefWidth="313.0">
+         <buttons>
+            <JFXButton fx:id="btnRemove" buttonType="RAISED" onAction="#removeMetalStock" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #F62459; -fx-background-radius: 2em;" text="Remove" textFill="WHITE" />
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" disable="true" onAction="#updateMetalStock" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #22a7f0; -fx-background-radius: 2em;" stylesheets="@../css/ButtonHover.css" text="Update" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="727.0" layoutY="538.0" prefHeight="40.0" prefWidth="313.0">
+         <buttons>
+            <JFXButton fx:id="btnCancel" buttonType="RAISED" onAction="#cancelAdding" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #F62459; -fx-background-radius: 2em;" text="Cancel" textFill="WHITE" />
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" onAction="#addMetalStock" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #22a7f0; -fx-background-radius: 2em;" stylesheets="@../css/ButtonHover.css" text="Add" textFill="WHITE" />
+         </buttons>
+      </ButtonBar>
+      <Label graphicTextGap="15.0" layoutX="16.0" layoutY="4.0" opacity="0.9" prefHeight="32.0" prefWidth="192.0" text="Metal Stock">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Circled%20Left%202_70px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label graphicTextGap="10.0" layoutX="32.0" layoutY="42.0" prefHeight="25.0" prefWidth="182.0" text="View Current Metal Stock" textFill="#22a7f0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Search_50px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Separator layoutX="210.0" layoutY="55.0" prefHeight="3.0" prefWidth="838.0" />
+      <VBox layoutX="32.0" layoutY="89.0" prefHeight="255.0" prefWidth="182.0" spacing="10.0">
+         <children>
+            <TextField fx:id="txtSearchMetalId" onKeyReleased="#searchUsingMetalId" promptText="Metal ID" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtSearchMetal" layoutX="10.0" layoutY="10.0" onKeyReleased="#searchUsingMetal" promptText="Metal" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtSearchCarat" layoutX="10.0" layoutY="45.0" onKeyReleased="#searchUsingCarat" promptText="Carat" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtSearchWeight" layoutX="10.0" layoutY="80.0" onKeyReleased="#searchUsingWeight" promptText="Weight" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtSearchPurchaseDate" layoutX="10.0" layoutY="115.0" onKeyReleased="#searchUsingPurchaseDate" promptText="Purchase Date" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtSearchBusinessmanId" layoutX="10.0" layoutY="150.0" onKeyReleased="#searchUsingBusinessmanId" promptText="Businessman ID" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="txtSearchBusinessmanName" layoutX="10.0" layoutY="185.0" onKeyReleased="#searchUsingBusinessmanName" promptText="Businessman Name" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow color="#abb7b7" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+         </children>
+      </VBox>
+      <Label graphicTextGap="10.0" layoutX="32.0" layoutY="423.0" prefHeight="25.0" prefWidth="102.0" text="Add Metal" textFill="#22a7f0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Plus_50px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Separator layoutX="130.0" layoutY="436.0" prefHeight="3.0" prefWidth="918.0" />
+      <ButtonBar layoutX="32.0" layoutY="462.0" prefHeight="40.0" prefWidth="875.0">
+         <buttons>
+            <JFXTextField fx:id="txtMetalId" editable="false" focusColor="#22a7f0" labelFloat="true" onKeyPressed="#txtMetalIdOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Metal ID" />
+            <JFXTextField fx:id="txtMetal" focusColor="#22a7f0" labelFloat="true" onKeyPressed="#txtMetalOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Metal" />
+            <JFXTextField fx:id="txtCarat" focusColor="#22a7f0" labelFloat="true" onKeyPressed="#txtCaratOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Carat" />
+            <JFXTextField fx:id="txtWeight" focusColor="#22a7f0" labelFloat="true" onKeyPressed="#txtWeightOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Weight" />
+            <DatePicker fx:id="txtPurchaseDate" editable="false" onKeyPressed="#txtPurchaseDateOnAction" promptText="Purchase Date" />
+         </buttons>
+      </ButtonBar>
+      <ButtonBar layoutX="32.0" layoutY="502.0" prefHeight="40.0" prefWidth="360.0">
+         <buttons>
+            <JFXComboBox fx:id="cmbBusinessmanId" focusColor="#22a7f0" labelFloat="true" onAction="#selectMetalBusinessman" onKeyPressed="#cmbMetalBusinessmanIdOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Businessmen ID" />
+            <JFXTextField fx:id="txtBusinessmanName" focusColor="#22a7f0" labelFloat="true" onAction="#selectMetalBusinessmanId" onKeyPressed="#txtBusinessmanNameOnAction" prefHeight="25.0" prefWidth="165.0" promptText="Businessmen Name" />
+         </buttons>
+      </ButtonBar>
+      <JFXButton fx:id="btnReport" buttonType="RAISED" layoutX="942.0" layoutY="14.0" onAction="#loadMetalStockDetailReport" prefHeight="26.0" prefWidth="102.0" style="-fx-background-radius: 2em; -fx-background-color: #00b16a;" text="Report" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Print_40px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

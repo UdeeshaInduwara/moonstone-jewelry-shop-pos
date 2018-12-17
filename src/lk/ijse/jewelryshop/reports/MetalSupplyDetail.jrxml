@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-06T20:11:11 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MetalSupplyDetail" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23622d60-7155-41ae-a07e-9a4c1ab4c965">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JewelryShop"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select metsupid,m.metid,metalType,carat,msd.weight,jm.jmid,jm.name,suplyDate from metal m,metalSuplyDetail msd,jewelryMaker jm where m.metid=msd.metid and jm.jmid=msd.jmid]]>
+	</queryString>
+	<field name="metsupid" class="java.lang.String"/>
+	<field name="metid" class="java.lang.String"/>
+	<field name="metalType" class="java.lang.String"/>
+	<field name="carat" class="java.lang.Integer"/>
+	<field name="weight" class="java.math.BigDecimal"/>
+	<field name="jmid" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="suplyDate" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="189" y="17" width="180" height="30" uuid="e9476dc7-fefa-4cb0-bf82-4587855b487f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Metal Supply Detail]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="0" y="0" width="72" height="30" uuid="b4664856-0965-43b3-beb4-84f5ca80733b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[metsupid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="0" width="69" height="30" uuid="299642a8-f064-4650-a2f9-25db45d7b7d0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[metid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="69" height="30" uuid="2feaa804-6483-4587-b734-0a9043a56a1c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[metalType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="210" y="0" width="69" height="30" uuid="f61ed885-10c3-4dda-9ff9-3928c31ce70c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[carat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="69" height="30" uuid="d39bfad3-61a5-4fdd-a933-47d3506d51b2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="348" y="0" width="69" height="30" uuid="1b7fe8c7-fd1e-4065-9549-d97e8400c446"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[jmid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="69" height="30" uuid="9ee2bde7-3adb-46a1-9399-9714fcad9a39"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="486" y="0" width="69" height="30" uuid="9200dace-6310-4c94-9b4e-407f3f1ae0bb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[suplyDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="0" y="0" width="72" height="30" uuid="5d3f4c98-fac8-47b8-bb12-932e3baec729"/>
+				<textFieldExpression><![CDATA[$F{metsupid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="0" width="69" height="30" uuid="a205d464-9e2c-4a08-b6ff-9b7eae16414a"/>
+				<textFieldExpression><![CDATA[$F{metid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="69" height="30" uuid="a93092a6-85cc-481f-90f9-5d3197f5afc6"/>
+				<textFieldExpression><![CDATA[$F{metalType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="69" height="30" uuid="3d978ff8-8a7f-4b50-b607-570fd0215792"/>
+				<textFieldExpression><![CDATA[$F{carat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="69" height="30" uuid="f4d6d5ad-7e74-4d1e-a1ae-425a3346e5cd"/>
+				<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="348" y="0" width="69" height="30" uuid="eadbe48a-6081-427e-ae3a-217da3087b5f"/>
+				<textFieldExpression><![CDATA[$F{jmid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="69" height="30" uuid="aca5bf0b-1a38-49c6-9a62-a79031905ad2"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="486" y="0" width="69" height="30" uuid="7c4808bf-a94d-46b7-8e5a-cb2368e77612"/>
+				<textFieldExpression><![CDATA[$F{suplyDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-07T20:16:04 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerDetail" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32da7a1d-54d4-4b3f-aa6b-3a8daffc8633">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JewelryShop"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select custid,passportNo,c.name as customer,country,h.hid,h.name as hotel from customer c,hotel h where c.hid=h.hid;]]>
+	</queryString>
+	<field name="custid" class="java.lang.String"/>
+	<field name="passportNo" class="java.lang.String"/>
+	<field name="customer" class="java.lang.String"/>
+	<field name="country" class="java.lang.String"/>
+	<field name="hid" class="java.lang.String"/>
+	<field name="hotel" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="189" y="17" width="180" height="30" uuid="f1cb9246-394c-42c2-8a7e-cdb4da4ff179">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customers Detail]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="0" y="0" width="95" height="30" uuid="418e0090-68a8-450d-9fee-011ce6b0e0d3"/>
+				<text><![CDATA[custid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="0" width="92" height="30" uuid="296604ca-0053-4bb4-b874-85410ec1e18f"/>
+				<text><![CDATA[passportNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="92" height="30" uuid="20fd7c3c-8bd1-4ca2-be03-b263086dd0d8"/>
+				<text><![CDATA[customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="92" height="30" uuid="ea992f7c-9218-4cf7-b279-ea42e79f31db"/>
+				<text><![CDATA[country]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="92" height="30" uuid="b764458d-8a1b-4b07-a00d-cfccbc96e4dd"/>
+				<text><![CDATA[hid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="92" height="30" uuid="bf2733b8-b4cf-4734-9ff5-7ef4b1989e76"/>
+				<text><![CDATA[hotel]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="0" y="0" width="95" height="30" uuid="61ef6afb-129c-4001-8653-921f33c1a6b8"/>
+				<textFieldExpression><![CDATA[$F{custid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="0" width="92" height="30" uuid="006d00a7-b67a-4963-9151-2ab8b1a23ebb"/>
+				<textFieldExpression><![CDATA[$F{passportNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="0" width="92" height="30" uuid="381dc8e5-c5ca-4d46-a464-85771cea952e"/>
+				<textFieldExpression><![CDATA[$F{customer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="92" height="30" uuid="88c80db0-d04c-4fa0-bbb4-1e0a20010783"/>
+				<textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="92" height="30" uuid="e2607e55-8dd0-497c-a6bd-b1feec31a3fd"/>
+				<textFieldExpression><![CDATA[$F{hid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="92" height="30" uuid="0947cb03-79f0-4167-a96c-ece61da037ec"/>
+				<textFieldExpression><![CDATA[$F{hotel}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="1281.0" style="-fx-background-color: #3D4956;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.jewelryshop.controller.HomeController">
+   <children>
+      <AnchorPane fx:id="pnlMain" layoutX="216.0" layoutY="35.0" prefHeight="607.0" prefWidth="1065.0" style="-fx-background-color: #ECF0F1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
+      <VBox layoutX="-1.0" layoutY="80.0" prefHeight="414.0" prefWidth="217.0">
+         <children>
+            <JFXButton fx:id="btnSellJewelry" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadSellJewelryForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Sell Jewelry" textAlignment="JUSTIFY" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Menu_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnJewelryStock" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadJewelryStockForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Jewelry Stock" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Jewelry_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnGemSuply" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadGemSuplyForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Gem Suply" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Ruby%20Gemstone_50px_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMetalSuply" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadMetalSuplyForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Metal Suply" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Sell%20Stock_48px_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMetalStock" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadMetalStockForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Metal Stock" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Gold%20Bars_50px_3.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnJewelryMakers" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadJewelryMakersForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Jewelry Makers" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Employee%20Card_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMetalBusinessmen" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadMetalBusinessmenForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Metal Businessmen" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Businessman_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHotels" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" onAction="#loadHotelsForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Hotels" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Hotel%20Check%20In_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnReport" alignment="BASELINE_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="15.0" layoutX="10.0" layoutY="325.0" onAction="#loadReportForm" prefHeight="45.0" prefWidth="217.0" ripplerFill="#22a7f0" styleClass="sideLabel" stylesheets="@../css/ButtonHover.css" text="Reports" textFill="#ecf0f1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Bullish_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane prefHeight="35.0" prefWidth="1281.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="btnUser" graphicTextGap="15.0" layoutX="1110.0" onAction="#loadUserForm" prefHeight="35.0" prefWidth="145.0" style="-fx-background-color: white;" textFill="#8d8282">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Circled%20User%20Male_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnSetting" graphicTextGap="15.0" layoutX="998.0" onAction="#loadSettingForm" prefHeight="35.0" prefWidth="101.0" style="-fx-background-color: white;" text="Setting" textFill="#8d8282">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Settings_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblDate" layoutX="21.0" prefHeight="35.0" prefWidth="125.0" textFill="#8d8282">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Calendar_40px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
+            <Label fx:id="lblTime" layoutX="166.0" prefHeight="35.0" prefWidth="125.0" textFill="#8d8282">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/Clock_40px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow color="#909090" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

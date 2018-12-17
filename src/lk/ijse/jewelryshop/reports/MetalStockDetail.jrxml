@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-06T19:02:09 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MetalStockDetail" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c5653f9-fbe3-462a-aaf2-a2549806596e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JewelryShop"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select m.metid,metaltype,carat,weight,purchaseDate,mb.metbid,name as businessman from metal m,metalPurchaseDetail mp,metalBusinessman mb where m.metid=mp.metid and mp.metbid=mb.metbid]]>
+	</queryString>
+	<field name="metid" class="java.lang.String"/>
+	<field name="metaltype" class="java.lang.String"/>
+	<field name="carat" class="java.lang.Integer"/>
+	<field name="weight" class="java.math.BigDecimal"/>
+	<field name="purchaseDate" class="java.sql.Date"/>
+	<field name="metbid" class="java.lang.String"/>
+	<field name="businessman" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="17" width="180" height="30" uuid="f56df4eb-02d1-4a88-8bb1-6b5655173a8b">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Metal Stock Detail]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="30" uuid="f7e7a045-3a23-48ea-a323-053eca8a7b6a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[metid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="30" uuid="371d1d78-6b17-4383-9d90-1f1a10843f0e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[metaltype]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="70" height="30" uuid="68b03dfb-0be1-4652-9e40-dfd79da8a23e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[carat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="2" width="79" height="30" uuid="812cdd37-ef95-4231-aac1-8c05948a3184"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[weight]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="0" width="88" height="30" uuid="1b50b8cd-7be6-42fd-81f0-9d05c6c8b754"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[purchaseDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="30" uuid="64256559-3ebf-4dfc-96c6-6bdf169c1ed7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[metbid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="30" uuid="d9e82bb6-7e8c-4a66-b049-925be0fab548"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[businessman]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="0" y="0" width="81" height="30" uuid="afe604d4-cbbb-43b5-9c88-081a3db20f98"/>
+				<textFieldExpression><![CDATA[$F{metid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="0" width="79" height="30" uuid="cf2875c1-4fac-4d0e-abcb-3049ce8f8541"/>
+				<textFieldExpression><![CDATA[$F{metaltype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="70" height="30" uuid="5761e87c-a963-4567-aa93-424ca4c41b2a"/>
+				<textFieldExpression><![CDATA[$F{carat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="2" width="79" height="30" uuid="549f3ffd-30ee-4dfc-a214-d999af97c6b2"/>
+				<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="0" width="88" height="30" uuid="cea8ee0e-ae23-49c3-a40c-431b8b6c1b98"/>
+				<textFieldExpression><![CDATA[$F{purchaseDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="0" width="79" height="30" uuid="e62f7e9d-7885-4a8d-9296-7c8dbcb0ad29"/>
+				<textFieldExpression><![CDATA[$F{metbid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="30" uuid="5e68fe10-cad8-4d75-82ba-77aa31762f7b"/>
+				<textFieldExpression><![CDATA[$F{businessman}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

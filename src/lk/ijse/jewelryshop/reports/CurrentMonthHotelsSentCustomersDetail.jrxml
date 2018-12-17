@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-11T18:15:46 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CurrentMonthHotelsSentCustomersDetail" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e9c4000-634b-4feb-9118-7603ebc1986b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JewelryShop"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select h.name as hotel,count(c.passportNo) as customerCount from customer c,hotel h,orders o where c.hid=h.hid and c.custid=o.custid and month(o.orderDate)=month(curdate()) and year(orderDate)=year(curdate()) group by h.hid]]>
+	</queryString>
+	<field name="hotel" class="java.lang.String"/>
+	<field name="customerCount" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="166" y="19" width="234" height="30" uuid="f4e0cad6-a82b-405d-b68a-c49a8e044eb5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Month Hotel's Sent Customers Detail]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="337" splitType="Stretch">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="10" y="0" width="534" height="320" uuid="8cf23d25-91b1-42d2-b0ce-d0609df3a316"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Customers Count"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{hotel}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{customerCount}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

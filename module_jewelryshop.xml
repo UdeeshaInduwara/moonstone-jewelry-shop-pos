@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_jewelryshop" default="compile.module.jewelryshop">
+  <dirname property="module.jewelryshop.basedir" file="${ant.file.module_jewelryshop}"/>
+  
+  <property name="module.jdk.home.jewelryshop" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.jewelryshop" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.jewelryshop" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.jewelryshop" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="jewelryshop.output.dir" value="${module.jewelryshop.basedir}/out/production/JewelryShop"/>
+  <property name="jewelryshop.testoutput.dir" value="${module.jewelryshop.basedir}/out/test/JewelryShop"/>
+  
+  <path id="jewelryshop.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="jewelryshop.module.production.classpath">
+    <path refid="${module.jdk.classpath.jewelryshop}"/>
+    <pathelement location="E:/JAVA Class/jfoenix.jar"/>
+    <pathelement location="E:/JAVA Class/mysql-connector-java-5.1.23-bin.jar"/>
+    <pathelement location="${basedir}/../../IJSE/SemesterOne/controlsfx-8.40.14/controlsfx-8.40.14.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/com.lowagie.text-2.1.7.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-beanutils-1.8.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-digester-2.1.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/itextpdf-5.3.4.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-javaflow-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jcommon-1.0.8.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jfreechart-1.0.13.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org-apache-commons-logging.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org.apache.commons.collections.jar"/>
+  </path>
+  
+  <path id="jewelryshop.runtime.production.module.classpath">
+    <pathelement location="${jewelryshop.output.dir}"/>
+    <pathelement location="E:/JAVA Class/jfoenix.jar"/>
+    <pathelement location="E:/JAVA Class/mysql-connector-java-5.1.23-bin.jar"/>
+    <pathelement location="${basedir}/../../IJSE/SemesterOne/controlsfx-8.40.14/controlsfx-8.40.14.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/com.lowagie.text-2.1.7.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-beanutils-1.8.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-digester-2.1.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/itextpdf-5.3.4.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-javaflow-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jcommon-1.0.8.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jfreechart-1.0.13.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org-apache-commons-logging.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org.apache.commons.collections.jar"/>
+  </path>
+  
+  <path id="jewelryshop.module.classpath">
+    <path refid="${module.jdk.classpath.jewelryshop}"/>
+    <pathelement location="${jewelryshop.output.dir}"/>
+    <pathelement location="E:/JAVA Class/jfoenix.jar"/>
+    <pathelement location="E:/JAVA Class/mysql-connector-java-5.1.23-bin.jar"/>
+    <pathelement location="${basedir}/../../IJSE/SemesterOne/controlsfx-8.40.14/controlsfx-8.40.14.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/com.lowagie.text-2.1.7.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-beanutils-1.8.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-digester-2.1.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/itextpdf-5.3.4.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-javaflow-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jcommon-1.0.8.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jfreechart-1.0.13.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org-apache-commons-logging.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org.apache.commons.collections.jar"/>
+  </path>
+  
+  <path id="jewelryshop.runtime.module.classpath">
+    <pathelement location="${jewelryshop.testoutput.dir}"/>
+    <pathelement location="${jewelryshop.output.dir}"/>
+    <pathelement location="E:/JAVA Class/jfoenix.jar"/>
+    <pathelement location="E:/JAVA Class/mysql-connector-java-5.1.23-bin.jar"/>
+    <pathelement location="${basedir}/../../IJSE/SemesterOne/controlsfx-8.40.14/controlsfx-8.40.14.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/com.lowagie.text-2.1.7.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-beanutils-1.8.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/commons-digester-2.1.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/itextpdf-5.3.4.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jasperreports-javaflow-6.4.3.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jcommon-1.0.8.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/jfreechart-1.0.13.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org-apache-commons-logging.jar"/>
+    <pathelement location="E:/Udeesha/jasper jar/org.apache.commons.collections.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.jewelryshop">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.jewelryshop">
+    <patternset refid="excluded.from.module.jewelryshop"/>
+  </patternset>
+  
+  <path id="jewelryshop.module.sourcepath">
+    <dirset dir="${module.jewelryshop.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.jewelryshop" depends="compile.module.jewelryshop.production,compile.module.jewelryshop.tests" description="Compile module JewelryShop"/>
+  
+  <target name="compile.module.jewelryshop.production" depends="register.custom.compilers" description="Compile module JewelryShop; production classes">
+    <mkdir dir="${jewelryshop.output.dir}"/>
+    <javac2 destdir="${jewelryshop.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.jewelryshop}/javac">
+      <compilerarg line="${compiler.args.jewelryshop}"/>
+      <bootclasspath refid="jewelryshop.module.bootclasspath"/>
+      <classpath refid="jewelryshop.module.production.classpath"/>
+      <src refid="jewelryshop.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.jewelryshop"/>
+    </javac2>
+    
+    <copy todir="${jewelryshop.output.dir}">
+      <fileset dir="${module.jewelryshop.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.jewelryshop.tests" depends="register.custom.compilers,compile.module.jewelryshop.production" description="compile module JewelryShop; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.jewelryshop" description="cleanup module">
+    <delete dir="${jewelryshop.output.dir}"/>
+    <delete dir="${jewelryshop.testoutput.dir}"/>
+  </target>
+</project>
